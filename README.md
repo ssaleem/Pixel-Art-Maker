@@ -1,3 +1,3 @@
 # Pixel Art Maker Project
 
-This project uses HTML `<table>` to create a grid and jQuery for event handling
+This project uses HTML `<canvas>` to create a grid and vanilla JavaScript for event handling
