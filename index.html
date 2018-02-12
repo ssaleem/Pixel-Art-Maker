@@ -4,9 +4,6 @@
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-<!-- This version uses jQuery for event handling and html Tables to build grid -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="designs.js"></script>
 </head>
 <body>
     <h1>Lab: Pixel Art Maker</h1>
@@ -24,7 +21,9 @@
     <input type="color" id="colorPicker">
 
     <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
-    <!-- <tr> and <td> are added through jQuery -->
+    <div id="cDiv">
+    <!-- Canvas is dynamically created here every time form is submitted -->
+    </div>
+    <script src="designs.js"></script>
 </body>
 </html>
