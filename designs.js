@@ -1,6 +1,6 @@
 $(function(){
-	var color = $('#colorPicker');
-	var table = $('#pixelCanvas');
+	const color = $('#colorPicker');
+	const table = $('#pixelCanvas');
 
 	//apply color to cell, when clicked
 	table.on( "click", "td", function( event ) {
@@ -10,15 +10,15 @@ $(function(){
 
 	// When size is submitted by the user, make grid
 	$('#sizePicker').submit(function(event){
-	  	var width = $('#inputWidth').val();
-	  	var height = $('#inputHeight').val();
+	  	let width = $('#inputWidth').val();
+	  	let height = $('#inputHeight').val();
 	  	// Delete any existing grid
 	  	table.find('tr').remove();
-	  	for(var row = 1; row <= height; row++){
+	  	for(let row = 1; row <= height; row++){
 	  		table.append("<tr></tr>");
 	  		// console.log(table.children()); //logs <tbody>
 	  		// hence use 'find' to get to <tr>
-	  		for(var col = 1; col <= width;col++){
+	  		for(let col = 1; col <= width;col++){
 	    		table.find('tr').last().append("<td></td>");
 			}
 	    }

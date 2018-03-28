@@ -1,11 +1,12 @@
 body {
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
 }
 
 h1 {
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    margin: 0.9em;
 }
 
 h2 {
@@ -38,3 +39,12 @@ td {
 input[type=number] {
     width: 6em;
 }
+ footer {
+    color: #7D7B85;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /*div doesn't take up all the available horizontal space when absolutely positioned*/
+ }
+ a {
+    color: #2D58FE;
+ }
