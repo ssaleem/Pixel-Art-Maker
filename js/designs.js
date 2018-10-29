@@ -1,15 +1,26 @@
 $(function(){
 	const color = $('#colorPicker');
+	const clear = $('#clear');
 	const table = $('#pixelCanvas');
 	const INIT_HEIGHT = 10;
 	const INIT_WIDTH = 10;
 
-	for(let row = 1; row <= INIT_HEIGHT; row++){
-  		table.append("<tr></tr>");
-  		for(let col = 1; col <= INIT_WIDTH;col++){
-    		table.find('tr').last().append("<td></td>");
-		}
-    }
+	function drawcCanvas(h, w) {
+		for(let row = 1; row <= h; row++){
+	  		table.append("<tr></tr>");
+	  		for(let col = 1; col <= w;col++){
+	    		table.find('tr').last().append("<td></td>");
+			}
+	    }
+	}
+
+	drawcCanvas(INIT_HEIGHT, INIT_WIDTH);
+
+    clear.on('click', function(){
+    	event.preventDefault();
+    	table.find('tr').remove();
+    	drawcCanvas($('#inputHeight').val(), $('#inputWidth').val());
+    });
 
 	//apply color to cell, when clicked
 	table.on( "click", "td", function( event ) {
@@ -19,18 +30,9 @@ $(function(){
 
 	// When size is submitted by the user, make grid
 	$('#sizePicker').submit(function(event){
-	  	let width = $('#inputWidth').val();
-	  	let height = $('#inputHeight').val();
 	  	// Delete any existing grid
 	  	table.find('tr').remove();
-	  	for(let row = 1; row <= height; row++){
-	  		table.append("<tr></tr>");
-	  		// console.log(table.children()); //logs <tbody>
-	  		// hence use 'find' to get to <tr>
-	  		for(let col = 1; col <= width;col++){
-	    		table.find('tr').last().append("<td></td>");
-			}
-	    }
+	  	drawcCanvas($('#inputHeight').val(), $('#inputWidth').val());
 	  	event.preventDefault();
     });
 

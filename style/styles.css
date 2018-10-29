@@ -1,3 +1,8 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 body {
     text-align: center;
     font-family: 'PT Sans', sans-serif;
@@ -7,19 +12,14 @@ body {
 
 h1 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 60px;
-    margin: 0.9em;
+    font-size: 46px;
+    margin: 0.7em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+    margin: 0.45em;
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
-}
-
-table,
 tr,
 td {
     border: 1px solid black;
@@ -39,15 +39,20 @@ td {
     width: 20px;
 }
 
-input[type=submit], input[type=color] {
-    border: none;
-    height: 2.6em;
-    margin: 2px 4px;
+td:hover {
     cursor: pointer;
-    border-radius: 4px;
 }
 
-input[type=submit]:hover, input[type=color]:hover {
+input[type=submit], input[type=color], input[type=button]{
+    border: none;
+    height: 2.5em;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    vertical-align: middle
+}
+
+input[type=submit]:hover, input[type=color]:hover, input[type=button]:hover{
     border: 1px solid grey;
 }
 
@@ -56,6 +61,7 @@ input[type=number] {
     width: 4em;
     border-radius: 4px;
 }
+
  footer {
     color: #7D7B85;
     font-size: 11px;
