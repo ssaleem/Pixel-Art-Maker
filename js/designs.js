@@ -21,9 +21,6 @@ $(function(){
 	$('#sizePicker').submit(function(event){
 	  	let width = $('#inputWidth').val();
 	  	let height = $('#inputHeight').val();
-	  	console.log('here');
-	  	console.log(width);
-	  	console.log(height);
 	  	// Delete any existing grid
 	  	table.find('tr').remove();
 	  	for(let row = 1; row <= height; row++){
