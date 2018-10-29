@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>Pixel Art Maker!</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Press+Start+2P" rel="stylesheet prefetch">
+    <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/styles.css">
 <!-- This version uses jQuery for event handling and html Tables to build grid -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="designs.js"></script>
+    <script src="js/designs.js"></script>
 </head>
 <body>
     <h1>Pixel Art Maker</h1>
@@ -14,19 +15,19 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" value="10">
         Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
+        <input type="number" id="inputWidth" name="width" min="1" value="10">
+        <input type="submit" value="Submit">
     </form>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <h2>Pick A Color <span><input type="color" id="colorPicker"></span></h2>
 
-    <h2>Design Canvas</h2>
+
+    <!-- <h2>Design Canvas</h2> -->
     <table id="pixelCanvas"></table>
     <!-- <tr> and <td> are added through jQuery -->
 
-    <footer>Coded by <a href="https://github.com/ssaleem">Sara S.</a></footer>
+    <footer><i class="far fa-copyright"></i> 2018 SARA SALEEM. ALL RIGHTS RESERVED</footer>
 </body>
 </html>
